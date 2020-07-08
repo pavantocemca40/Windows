@@ -1,0 +1,10 @@
+
+================= An unhandled win32 exception occurred in w3wp.exe ===================================
+Error : an unhandled win32 exception occurred in w3wp.exe the just-in-time debugger lanching a my MVC application in IIS
+
+Solutions:-
+
+1.Open the Advanced settings dialog of the Application pool that is serving the application in IIS Manager, and set: Enable 32-Bit Applications to True
+2. check the permission of Application Folder.
+
+=================

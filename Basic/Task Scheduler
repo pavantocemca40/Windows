@@ -1,0 +1,31 @@
+Create ‘My Task’ to run C:RunMe.bat at 9 AM everyday: 
+	
+	SchTasks /Create /SC DAILY /TN “My Task” /TR “C:RunMe.bat” /ST 09:00
+
+Modify ‘My Task’ to run at 2 PM: 
+	
+	SchTasks /Change /TN “My Task” /ST 14:00
+
+Create ‘My Task’ to run C:RunMe.bat on the first of every month: 
+	
+	SchTasks /Create /SC MONTHLY /D 1 /TN “My Task” /TR “C:RunMe.bat” /ST 14:00
+
+Create ‘My Task’ to run C:RunMe.bat every weekday at 2 PM: 
+	
+	SchTasks /Create /SC WEEKLY /D MON,TUE,WED,THU,FRI /TN “My Task” /TR “C:RunMe.bat” /ST 14:00
+	
+
+===========================================================================================
+
+chtasks /create /tn "MyTask" /sc minute /mo 5 /tr "MyTask.cmd"
+
+Explanation:
+
+/create - create a new scheduled task
+/tn "MyTask" - give the task as name
+/sc minute - schedule the task with a frequency in minutes
+/mo 5 - and modify the freqency to be every 5 minutes
+/tr "MyTask.cmd" - run the command MyTask.cmd
+Source schtasks - Create / edit a Scheduled Job/Task.
+
+=======================================================================================
